@@ -1,60 +1,119 @@
-<html lang="pl-PL">
-<head>
-<title>
-Igor Studnicki
-</title>
-<title>Tabela</title>
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+ <header>
+        <h1>Aktualna data i godzina:</h1>
+        <p id="czas"></p>
+    </header>
+
+    <script>
+        // Funkcja do aktualizacji daty i godziny
+        function aktualizujDateIGodzine() {
+            var teraz = new Date(); // Pobierz aktualną datę i godzinę
+            var rok = teraz.getFullYear();
+            var miesiac = teraz.getMonth() + 1; // Dodaj 1, ponieważ miesiące są numerowane od 0
+            var dzien = teraz.getDate();
+            var godzina = teraz.getHours();
+            var minuta = teraz.getMinutes();
+            var sekunda = teraz.getSeconds();
+
+            // Formatuj datę i godzinę, dodając zero przed jednocyfrowymi liczbami
+            if (miesiac < 10) {
+                miesiac = "0" + miesiac;
+            }
+            if (dzien < 10) {
+                dzien = "0" + dzien;
+            }
+            if (godzina < 10) {
+                godzina = "0" + godzina;
+            }
+            if (minuta < 10) {
+                minuta = "0" + minuta;
+            }
+            if (sekunda < 10) {
+                sekunda = "0" + sekunda;
+            }
+
+            // Wyświetl datę i godzinę na stronie
+            document.getElementById("czas").textContent = rok + "-" + miesiac + "-" + dzien + " " + godzina + ":" + minuta + ":" + sekunda;
+        }
+
+        // Uruchom funkcję aktualizacji daty i godziny co sekundę
+        setInterval(aktualizujDateIGodzine, 1000);
+
+        // Wywołaj funkcję aktualizacji daty i godziny, aby wyświetlić je od razu
+        aktualizujDateIGodzine();
+    </script>
+</body>
 
 
 
-<title>Tabela</title>
-<meta charset="UTF-8">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 100vh;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        tr:nth-child(1) {
+            background-color: blue; /* Pierwszy wiersz niebieski */
+            color: white;
+        }
+        tr:nth-child(n+2) {
+            background-color: lightblue; /* Wiersze 2-4 jasno niebieskie */
+        }
+        table, td {
+            border: 2px solid white; /* Biała ramka */
+        }
+        a {
+            text-decoration: none; /* Usuń podkreślenie linku */
+            color: inherit; /* Dziedzicz kolor tekstu od rodzica */
+        }
+    </style>
 </head>
 <body>
-<body style="background-color: purple; color: white">
-<img src="purple-guy-dancing.gif" alt="Purple" width="1700" height="500">
 
-<table style="width:100%">
-  <style>
-table, th, td {
-border: 20px solid green;
-witdh;100%
-
-}
-th, td {
-padding: 16px;
-}
-</style>
-
-<tr><th>Nazwisko</th><th>Imię</th><th>Wiek</th></tr>
-<tr><td>Purple</td><td>Guy</td><td>36</td></tr>
-<tr><td>Purple</td><td>Guy</td><td>48</td></tr>
-<tr><td>Purple</td><td>Guy</td><td>76</td></tr>
-<tr><td>Purple</td><td>Guy</td><td>98</td></tr>
+<table>
+<tr>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+</tr>
+<tr>
+<td>Studnicki</td>
+<td>Studnicki</td>
+<td>Studnicki</td>
+<td>Studnicki</td>
+</tr>
+<tr>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+<td><a href="https://igorigor32.github.io/testpurple/">Igor</a></td>
+</tr>
+<tr>
+<td>Studnicki</td>
+<td>Studnicki</td>
+<td>Studnicki</td>
+<td>Studnicki</td>
+</tr>
 </table>
-
-
-
-
-
-
-
 
 </body>
 </html>
+
+
+
+
+
+
+
+
